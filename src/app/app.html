@@ -1,0 +1,29 @@
+<header class="topnav">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a routerLink="/add" routerLinkActive="active">Add</a>
+  <a routerLink="/expenses" routerLinkActive="active">Expenses</a>
+  <a routerLink="/chat" routerLinkActive="active">Chat</a>
+</header>
+
+<main>
+  <router-outlet />
+</main>
+
+<style>
+  .topnav {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background: #111827;
+    font-family: system-ui, sans-serif;
+  }
+  .topnav a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-weight: 600;
+    padding: .25rem 0;
+    border-bottom: 2px solid transparent;
+  }
+  .topnav a:hover { color: white; }
+  .topnav a.active { color: white; border-bottom-color: #2563eb; }
+</style>
